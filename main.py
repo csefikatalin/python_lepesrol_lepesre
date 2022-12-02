@@ -124,6 +124,7 @@ A rendelések felvétele után készítsünk statisztikát!
 6.	… ami még eszetekbe jut. 
 """
 pizzarendelo.rendelesfelvetel()
+
 #################################################################################################
 # egymásba ágyazott listák
 
