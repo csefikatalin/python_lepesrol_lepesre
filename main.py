@@ -123,14 +123,17 @@ A rendelések felvétele után készítsünk statisztikát!
 5.	A kicsi, nagy , vagy a közepes pizzából rendeltek-e többet? 
 6.	… ami még eszetekbe jut. 
 """
-pizzarendelo.rendelesfelvetel()
+# pizzarendelo.rendelesfelvetel()
 
 #################################################################################################
 # egymásba ágyazott listák
 
 #################################################################################################
 # fájlbeolvasás
-
+import fajlbeolvasas
+fajlbeolvasas.beolvas()
+import ceasar
+#ceasar.titkosit()
 #################################################################################################
 # osztályok használata
 
