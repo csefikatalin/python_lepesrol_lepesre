@@ -131,11 +131,15 @@ A rendelések felvétele után készítsünk statisztikát!
 #################################################################################################
 # fájlbeolvasás
 import fajlbeolvasas
-fajlbeolvasas.beolvas()
+#fajlbeolvasas.beolvas()
 import ceasar
 #ceasar.titkosit()
 #################################################################################################
 # osztályok használata
+import osztalyok
+osztalyok.kezd()
+##################################################################################################
+
 
 
 

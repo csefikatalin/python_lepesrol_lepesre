@@ -14,6 +14,17 @@ def f_beolvas(fajlnev):
     fajlom.close()
     feldolgoz(fajl_tartalom)
 
+    fejlec = fajlom.readline()
+    print(fejlec)
+    fajl_tartalom= fajlom.readlines()
+    print(fajl_tartalom)
+    fajlom.close()
+
+
+
+
+
+
 def feldolgoz(fajl_tartalom):
     i=0
     while i<len(fajl_tartalom):
