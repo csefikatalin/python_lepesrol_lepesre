@@ -2,7 +2,7 @@ def egyszeru_elagazas():
 
     #adott egy szám, döntsük el róla, hogy páros, vagy páratlan?
     # Milyen számokkal tesztelnéd a programod?
-    szam = 12
+    szam:int = 12
     # tesztesetek
     # szam -----  várt eredmény
     #  12      |      12 páros
@@ -15,8 +15,8 @@ def egyszeru_elagazas():
     else:
         print(f"{szam} páratlan.")
     #kérjünk be egy nevet és az illető nemét! Írjuk ki, hogy az adott nevű ember milyen nemű!
-    nev = input("A neved:")
-    neme = input("A nemed (f/n):")
+    nev:str = input("A neved:")
+    neme:str = input("A nemed (f/n):")
     if neme == "f":
         print(f"{nev} férfi.")
     else:
@@ -33,7 +33,7 @@ def tobbszoros_elagazas_paritas():
     #  12.3    |      12.3 pozitív
     #  -13.45  |      -13.45 negatív
 
-    szam = -12
+    szam:int = -12
     if szam > 0:
         print(f"{szam} pozitív.")
     elif szam==0:
@@ -52,7 +52,7 @@ def tobbszoros_elagazas_osztalyzat():
         90%–100%-ig jeles)!
     Ha a szám nem 0 és 100 közötti, akkor a program írja ki a konzolra, hogy „Hiba: érvénytelen százalék!”!
     """
-    szam = int(input("Adj meg egy 0 ész 100 közötti számot! "))
+    szam:int = int(input("Adj meg egy 0 ész 100 közötti számot! "))
     if szam <= 59 and szam >= 0:
         print(f"{szam} % - elégtelen")
     elif szam <= 69:
@@ -69,9 +69,9 @@ def tobbszoros_elagazas_osztalyzat():
 def feltetelek_and():
     """13.	Adj meg három egész számot egy-egy változóba, melyek egy sorozat első három elemét jelentik.
     Írd ki a „növekvő” szót, ha a három szám növekvő sorrendben áll, és a „csökkenő” szót, ha csökkenőben!"""
-    szam1 = 34
-    szam2 = 45
-    szam3 = 56
+    szam:int1 = 34
+    szam2:int = 45
+    szam3:int = 56
     # Milyen számokkal tesztelnéd a programod?
     # tesztesetek
     # szam1,szam2,szam3 -----  várt eredmény
@@ -87,7 +87,7 @@ def feltetelek_and():
 
 def feltetelek_or():
     """Kérj be egy egész számot, és írd ki, hogy osztható-e 3-mal vagy öttel!"""
-    szam = int(input("Adj meg egy 0 ész 100 közötti számot! "))
+    szam:int = int(input("Adj meg egy 0 ész 100 közötti számot! "))
     # Milyen számokkal tesztelnéd a programod?
     # tesztesetek
     # szam         -----  várt eredmény
@@ -108,8 +108,8 @@ def egymasbaagyazott():
      tipus : e - édes , m - mostoha
      nem : f - fiú, l - lány
     """
-    tipus = "e"
-    nem = "f"
+    tipus:str = "e"
+    nem:str = "f"
     #tesztesetek
     #     tipus |  nem  |  várt eredmény
     #       e   |   f   |   Saját fiúgyermek.
@@ -150,16 +150,16 @@ def pizza():
 
     """GONDOLD ÁT A TEZSTESETEKET! """
     # A változók kezdőértékének megadása - inicializálás *********************
-    sajtos_alap_ar = 1000
-    gombas_alap_ar = 1100
-    sonkas_alap_ar = 1200
+    sajtos_alap_ar:int = 1000
+    gombas_alap_ar:int = 1100
+    sonkas_alap_ar:int = 1200
     # Adatok bekérése ********************************************************
-    tipus = input("Válasszon pizzát 1 - sajtos / 2 - gombás / 3 - sonkás: ")
+    tipus:str = input("Válasszon pizzát 1 - sajtos / 2 - gombás / 3 - sonkás: ")
 
-    meret = input("A pizza mérete (k)icsi/(n)normál/(o)óriás k/n/o: ")
-    meret = meret[0:1].lower()
-    feltet_kelle =  input("Kér extra feltétet? i/n: ")
-    feltet_kelle = feltet_kelle[0:1].lower()
+    meret:str = input("A pizza mérete (k)icsi/(n)normál/(o)óriás k/n/o: ")
+    meret:str = meret[0:1].lower()
+    feltet_kelle:str =  input("Kér extra feltétet? i/n: ")
+    feltet_kelle:str = feltet_kelle[0:1].lower()
 
     szoveg= "A rendelt pizza: "
     ar = 0
@@ -210,34 +210,34 @@ def pizza2():
     Az extra feltét plusz 50 Ft-ba kerül. """
 
     # Adatok bekérése ********************************************************
-    tipus = beker("Válasszon pizzát 1 - sajtos / 2 - gombás / 3 - sonkás: ")
-    meret = beker("A pizza mérete (k)icsi/(n)normál/(o)óriás k/n/o: ")
-    feltet_kelle = beker("Kér extra feltétet? i/n: ")
+    tipus:str = beker("Válasszon pizzát 1 - sajtos / 2 - gombás / 3 - sonkás: ")
+    meret:str = beker("A pizza mérete (k)icsi/(n)normál/(o)óriás k/n/o: ")
+    feltet_kelle:str = beker("Kér extra feltétet? i/n: ")
 
     # Ár számítása ********************************************************
-    ar = tipus_ar(tipus)
-    ar = meret_ar(meret, ar) + feltet_ar(feltet_kelle)
+    ar:int = tipus_ar(tipus)
+    ar:int = meret_ar(meret, ar) + feltet_ar(feltet_kelle)
     # Kiírandó szöveg kialakítása ********************************************************
     minta("=", 100)
-    szoveg = "A rendelt pizza: " + tipus_szoveg(tipus) + meret_szoveg(meret) + feltet_szoveg(feltet_kelle)
+    szoveg:str = "A rendelt pizza: " + tipus_szoveg(tipus) + meret_szoveg(meret) + feltet_szoveg(feltet_kelle)
     print(szoveg + "fizetendő: " + str(ar))
     minta("=", 100)
 
 
-def minta(jel, db):
+def minta(jel:str, db:int):
     print(jel * db)
 
-def beker(szoveg):
+def beker(szoveg:str):
     minta("*", 100)
     sz = input(szoveg)
 
     return sz[0:1].lower()
 
-def tipus_ar(tipus):
+def tipus_ar(tipus:str):
     # A változók kezdőértékének megadása - inicializálás *********************
-    sajtos_alap_ar = 1000
-    gombas_alap_ar = 1100
-    sonkas_alap_ar = 1200
+    sajtos_alap_ar:int = 1000
+    gombas_alap_ar:int = 1100
+    sonkas_alap_ar:int = 1200
     ar = 0
     if tipus == "1":
         ar = sajtos_alap_ar
@@ -249,7 +249,7 @@ def tipus_ar(tipus):
         ar = sonkas_alap_ar
     return ar
 
-def tipus_szoveg(tipus):
+def tipus_szoveg(tipus.str):
     szoveg = ""
     if tipus == "1":
         szoveg += "sajtos pizza."
@@ -262,14 +262,14 @@ def tipus_szoveg(tipus):
     return szoveg
 
 
-def meret_ar(meret, ar):
+def meret_ar(meret:str, ar:int):
     if meret == "k":
         ar *= 0.9
     elif meret == "o":
         ar *= 1.1
     return ar
 
-def meret_szoveg(meret):
+def meret_szoveg(meret:str):
     szoveg = ""
     if meret == "k":
         szoveg += " Kicsi méretben,  "
@@ -280,14 +280,14 @@ def meret_szoveg(meret):
 
     return szoveg
 
-def feltet_szoveg(feltet_kelle):
-    szoveg = ""
+def feltet_szoveg(feltet_kelle:str):
+    szoveg:str = ""
     if feltet_kelle == "i":
         szoveg += "extra feltéttel. "
     return szoveg
 
-def feltet_ar(feltet_kelle):
-    pluszar = 0
+def feltet_ar(feltet_kelle:str):
+    pluszar:int = 0
     if feltet_kelle == "i":
         pluszar = 50
     return pluszar

@@ -3,8 +3,9 @@ def kiiras():
 
 
 def kiiras_nev():
-    nev = "Katalin"     # szöveges típus - str
-    kor = 53.5          # szám típus - float
+    nev:  str = "Katalin"     # szöveges típus - str
+    nev = nev + "valami"
+    kor: int = 53.5          # szám típus - float
     magassag = 173      # szám - int
     ferfi = False       # logikai - bool
     print(f"Az én nevem: {nev} \n {kor} éves vagyok.")

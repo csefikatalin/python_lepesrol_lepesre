@@ -3,11 +3,11 @@ eltolt=["X","Y","Z","A","Á","B","C","D","E","É","F","G","H","I","Í","J","K","
 
 
 def titkosit():
-    eredeti_szoveg = input("kérek egy szöveget: ").upper()
-    titkositott_szoveg=""
+    eredeti_szoveg:str = input("kérek egy szöveget: ").upper()
+    titkositott_szoveg:str =""
     i = 0
     while i<len(eredeti_szoveg):
-        kodolt_betu = betukeres(eredeti_szoveg[i])
+        kodolt_betu:str  = betukeres(eredeti_szoveg[i])
         titkositott_szoveg += kodolt_betu
         i+=1
 
